@@ -1,0 +1,157 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+/* 
+/* Style du header et de la navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+} */
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.section-1, .section-2 {
+    background-color: #bdb3c1;
+    padding: 100px; 
+    margin: 20px 0; 
+    border-radius: 80px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    color: #333; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    width: 35%;
+    margin: auto;
+}
+
+.section-1{
+    background-color: #BDB4E7;
+}
+
+.section-2 {
+    background-color: #bc9dc8;
+}
+
+.section-1 h2 {
+    color: #8b4141; 
+    font-size: 24px;
+    margin-top: 0; 
+}
+
+.section-1 h1, .section-2 h1 {
+    font-size: 26px;
+}
+
+
+.section-1 p {
+    margin-bottom: 12px; 
+}
+
+p {
+    margin-bottom: 20px; 
+
+}
+
+.section-1 fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.section-1 legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9c503a;
+}
+
+.section-1 button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #78b1ee;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.section-1 button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.section-2 fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.section-2 legend {
+    font-weight: bold;
+    color: #9c503a;
+}
+
+.section-2 button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.section-2 button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.section-2 button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}

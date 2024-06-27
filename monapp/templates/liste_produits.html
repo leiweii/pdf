@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <section>
+        {% if client_nom and client_prenom %}
+             <p>Bienvenue {{ client_prenom }} {{ client_nom }}!</p>
+        {% endif %}
+    </section>
+
+    <h1>Liste des Produits</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Catédorie</th>
+                <th>Nom</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produit in produits %}
+                <tr>
+                    <td>{{ produit.categorie }}</td>
+                    <td>{{ produit.nom }}</td>
+                    <td>{{ produit.quantite }}</td>
+                    <td>{{ produit.prix_unitaire }}</td>
+                    <td>
+                        
+                        <form action="{% url 'supprimer_produit' produit.pk %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'generer_pdf' %}" class="btn btn-primary">Générer PDF</a>
+
+{% endblock %}
+

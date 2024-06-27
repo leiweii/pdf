@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section-2">
+    <h1>Saisir les Informations Client</h1>
+    <form method="post" action="{% url 'saisie_informations' %}">
+        {% csrf_token %}
+        
+        <fieldset>
+            <legend>Informations Client</legend>
+            {{ client_form.as_p }}
+        </fieldset>
+        
+        <button type="submit">Enregistrer Informations Client</button>
+    </form>
+</section>
+
+{% endblock %}

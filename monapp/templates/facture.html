@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Facture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #aa6d6d;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        h1 {
+            font-size: 24px; 
+            color: #333;
+            text-align: center;
+            margin-top: 20px; 
+            margin-bottom: 30px; 
+        }
+        
+        .logo {
+            width: 100px; /* Exemple: ajustez la taille selon vos besoins */
+            height: auto; /* Pour maintenir les proportions */
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    <img src="{{ logo_path }}" alt="Logo" class="logo">
+    <h1>Facture</h1>
+    
+
+    <h2>Informations du Client</h2>
+    <p><strong>Nom:</strong> {{ client.nom }}</p>
+    <p><strong>Prénom:</strong> {{ client.prenom }}</p>
+    <p><strong>Téléphone:</strong> {{ client.numero_telephone }}</p>
+    <p><strong>Email:</strong> {{ client.email }}</p>
+    <p><strong>Adresse:</strong> {{ client.adresse }}, {{ client.code_postal }} {{ client.ville }}</p>
+    
+
+    <h2>Liste des Produits</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Nom du produit</th>
+                <th>Quantité</th>
+                <th>Prix Unitaire</th>
+                <th>Prix Total TTC</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produit in produits %}
+            <tr>
+                <td>{{ produit.categorie }}</td>
+                <td>{{ produit.nom }}</td>
+                <td>{{ produit.quantite }}</td>
+                <td>{{ produit.prix_unitaire }}</td>
+                <td>{{ produit.prix_total_ttc }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
